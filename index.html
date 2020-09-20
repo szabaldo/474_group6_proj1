@@ -1,37 +1,56 @@
 <!DOCTYPE html>
-    <head>
-        <link rel="stylesheet" href="duckHunt.css" type="text/css">
-    </head>
 
-    <body>
-        <div id="mainContent">
-            <div id="gameBoard">
-                <div id="playBoard">
-                    <div id="gunBox">
-                        
-                    </div>
-                </div>
-                <div id="infoBoard">
-                    <div id="score" class=infoElements>
-                        Score: 5
-                    </div>
-                    <div id="ammo" class=infoElements>
-                        Ammo: 6
-                    </div>
-                    <div id="gameTitle" class=infoElements>
-                        DUCK HUNT
-                    </div>
-                    <div id="roundNumber" class=infoElements>
-                        ROUND 1
-                    </div>
-                </div>
-           
+<head>
+    <link rel="stylesheet" href="duckHunt.css" type="text/css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="duckHunt.js"></script>
+    <script type="text/javascript" src="duckHuntUI.js"></script>
+</head>
+
+<body>
+    <div id="mainContent" class="board">
+        <div id="crosshair">
                 
-
-            </div>
         </div>
+        <div id="gameBoard" class="board">
+            <div id="playBoard" class="board">
+                <!-- <div id="gunBox">
 
+                </div> -->
+            </div>
+            <div id="infoBoard" class="board">
+                <div id="score" class=infoElements>
+                    Score: 5
+                </div>
+                <div id="ammo" class=infoElements>
+                    Ammo: 6
+                </div>
+                <div id="gameTitle" class=infoElements>
+                    DUCK HUNT
+                </div>
+                <div id="roundNumber" class=infoElements>
+                    ROUND 1
+                </div>
+            </div>
 
-    </body>
+            <div id="target">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="extraUI">
+        <button id="btnPlay" class="btn">Play!</button>
+        <button id="btnLaunch" class="btn">Launch Target</button>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var DHUI = new duckHuntUI();
+        });
+    </script>
+
+</body>
 
 </html>
